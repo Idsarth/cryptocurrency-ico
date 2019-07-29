@@ -5,4 +5,7 @@
     @include responsive(medium) {
         display: block;
     }
+    @include responsive(small) {
+        font-size: 10px;
+    }
 }

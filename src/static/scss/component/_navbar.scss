@@ -79,6 +79,9 @@
         &-content {
             width: 90%;
         }
+        &-logo {
+            width: 150px;
+        }
     }
     @include responsive(xsmall) {
         &-content {

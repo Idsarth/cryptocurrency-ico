@@ -13,3 +13,11 @@
         --header-height: 4rem;
     }
 }
+
+.l-slide {
+    margin-top: var(--header-height);
+    height: 100vh;
+    @include responsive(large) {
+        --header-height: 4rem;
+    }
+}

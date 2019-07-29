@@ -4,7 +4,7 @@ import { IoMdMenu } from 'react-icons/io'
 const Toggle = ({ handlerToggle }) => {
   return (
     <Fragment>
-      <IoMdMenu size='40' className='toggle' onClick={handlerToggle} />
+      <IoMdMenu size='35' className='toggle' onClick={handlerToggle} />
     </Fragment>
   )
 }
