@@ -1,0 +1,20 @@
+.icon {
+    text-align: center;
+    &-image {
+        width: 100px;
+    }
+
+    &-title {
+        font-size: 15px;
+        color: darken($color:#fff, $amount: 10);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &-description {
+        color: darken($color:#fff, $amount: 15);
+        font-weight: 500;
+        font-size: 14px ;
+        margin-top: .30rem;
+    }
+}

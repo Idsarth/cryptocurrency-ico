@@ -8,4 +8,20 @@
     font-size: 1.1rem;
     color: var(--color-secondary);
     font-weight: 500;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    &::before {
+        content: 'Contacto';
+        position: absolute;
+        font-size: 80px;
+        opacity: .4;
+    }
+    @include responsive(medium) {
+        &::before {
+            font-size: 60px;
+        }
+    }
 }

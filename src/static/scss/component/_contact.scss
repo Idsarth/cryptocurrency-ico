@@ -1,5 +1,48 @@
 .contact {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 1fr;
+        grid-row-gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    @include responsive(920px) {
+        &-content {
+            grid-template-rows: 200px 1fr;
+        }
+        &-grid {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap: 2rem;
+            width: 100%;
+        }
+    }
+    @include responsive(670px) {
+        &-content {
+            width: 100%;
+        }
+    }
+
+    @include responsive(560px) {
+        &-content {
+            grid-template-rows: 1fr;
+        }
+    }
 }

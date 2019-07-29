@@ -24,7 +24,11 @@
 .l-section {
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 5rem;
+    padding-top: 10rem;
     width: 100%;
     background-color: var(--color-main);
+
+    @include responsive(medium) {
+        padding-top: 5rem;
+    }
 }

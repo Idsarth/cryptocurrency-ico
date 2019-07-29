@@ -7,7 +7,8 @@ class ContactForm extends Component {
     this.state = {
       user: '',
       email: '',
-      message: ''
+      message: '',
+      sendText: 'Enviar mensaje'
     }
     this.handlerChange = this.handlerChange.bind(this)
     this.handlerSubmit = this.handlerSubmit.bind(this)
@@ -32,17 +33,15 @@ class ContactForm extends Component {
           <input
             type='text'
             placeholder='Nombre'
-            className='contact-input'
+            className='form-input'
             value={this.state.name}
             onChange={this.handlerChange}
             name='name'
           />
-        </div>
 
-        <div className='form-group'>
           <input
             type='email'
-            placeholder='Email'
+            placeholder='Correo'
             className='form-input'
             value={this.state.email}
             onChange={this.handlerChange}
@@ -52,7 +51,7 @@ class ContactForm extends Component {
 
         <div className='form-group'>
           <textarea
-            className='form-group'
+            className='form-input form-area'
             placeholder='Mensaje'
             value={this.state.message}
             name='message'
@@ -60,6 +59,11 @@ class ContactForm extends Component {
           />
         </div>
 
+        <input
+          type='submit'
+          value={this.state.sendText}
+          className='form-submit'
+        />
       </form>
     )
   }

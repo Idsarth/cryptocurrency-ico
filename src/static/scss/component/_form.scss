@@ -1,0 +1,59 @@
+.form {
+    width: 100%;
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-row-gap: 1.2rem;
+
+    &-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        width: 100%; 
+    }
+
+    &-area {
+        grid-column: 1 / span 2;
+        resize: none;
+        height: 200px;
+    }
+    &-input {
+        width: 100%;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 15px 20px;
+        background-color: rgb(12, 46, 114);
+        color: darken($color: #fff, $amount: 10);
+        font-size: 15px;
+        &::placeholder {
+            color: darken($color: #fff, $amount: 10);
+        }
+        &:focus {
+            box-shadow: 0 1px 5px 2px var(--color-secondary);
+        }
+    }
+
+    &-submit {
+        background-color: var(--color-secondary);
+        border: none;
+        cursor: pointer;
+        padding: 10px 50px;
+        border-radius: 20px;
+        font-size: 17px;
+        color: darken($color: #fff, $amount: 10);
+        margin-top: 1rem;
+        justify-self: center;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+        &:hover {
+            background-color: darken(#3F93F7, 20);
+        }
+    }
+
+    @include responsive(670px) {
+        padding: 0;
+    }
+}
