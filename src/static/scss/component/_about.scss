@@ -1,0 +1,31 @@
+.about {
+    margin-top: 15rem;
+    .global-title-about {
+        font-size: 1.1rem;
+        color: var(--color-secondary);
+        font-weight: 500;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+        &::before {
+            content: 'NOSOTROS';
+            position: absolute;
+            font-size: 80px;
+            opacity: .4;
+        }
+        @include responsive(medium) {
+            &::before {
+                font-size: 60px;
+            }
+        }
+        @include responsive(small) {
+            font-size: 15px;
+            &::before {
+                bottom: 10px;
+                font-size: 40px;
+            }
+        }
+    }
+}
