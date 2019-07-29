@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80% 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    background-color: yellow;
 
     &-icon {
         color: var(--color-secondary);
@@ -12,6 +16,45 @@
 
         &:hover {
             opacity: .99;
+        }
+    }
+
+    &-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: end;
+    }
+
+    &-image {
+        height: 130px;
+    }
+
+    &-list {
+        justify-self: start;
+    }
+
+    &-item {
+        padding: 3px 5px;
+    }
+
+    &-item-bem {
+        font-size: 30px;
+        color: darken(#fff, 10);
+        text-transform: uppercase;
+    }
+
+    &-link {
+        color: darken(#fff, 20);
+        font-size: 14px;
+        position: relative;
+        left: 0;
+        transition: all .3s ease-in-out;
+        &:hover {
+            position: relative;
+            left: 10px;
+            transition: left .3s ease-in-out;
+            color: var(--color-secondary);
         }
     }
 }
