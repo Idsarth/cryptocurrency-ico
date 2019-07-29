@@ -6,8 +6,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    background-color: yellow;
-
     &-icon {
         color: var(--color-secondary);
         cursor: pointer;
@@ -56,5 +54,26 @@
             transition: left .3s ease-in-out;
             color: var(--color-secondary);
         }
+    }
+
+    @include responsive(600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 90% 10%;
+
+        &-top {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            grid-row-gap: 1rem;
+        }
+        &-list {
+            justify-self: center;
+            text-align: center;
+        }
+        &-icon {
+           font-size: 20px;
+        }
+    }
+    @include responsive(small) {
+        grid-template-rows: 80% 20%;
     }
 }

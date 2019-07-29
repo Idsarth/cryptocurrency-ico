@@ -39,6 +39,14 @@
     background-color: #08031A;
     margin-top: 4rem;
     height: 250px;
+
+    @include responsive(600px) {
+        height: 450px;
+        padding: 2rem 0 0 0;
+    }
+    @include responsive(small) {
+        height: 500px;
+    }
 }
 
 .l-copyright {
@@ -47,4 +55,12 @@
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid darken(#fff, 60);
+
+
+
+    @include responsive(330px) {
+        flex-direction: column-reverse;
+        padding: .3rem;
+        justify-content: center;
+    }
 }
