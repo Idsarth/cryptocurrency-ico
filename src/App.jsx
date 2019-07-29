@@ -4,10 +4,11 @@ import Navbar from './components/Navbar'
 
 const Home = React.lazy(() => import('./pages/Home'))
 const About = React.lazy(() => import('./pages/About')) 
+import PageLoading from './pages/PageLoading'
 
 const App = () => {
   return (
-    <Suspense fallback={<p>Cargando...</p>}>
+    <Suspense fallback={<PageLoading />}>
       <Router>
         <Home path='/' />
         <About path='/about' />
