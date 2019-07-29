@@ -24,4 +24,11 @@
             font-size: 60px;
         }
     }
+    @include responsive(small) {
+        font-size: 15px;
+        &::before {
+            bottom: 10px;
+            font-size: 40px;
+        }
+    }
 }

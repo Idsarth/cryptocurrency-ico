@@ -17,4 +17,16 @@
         font-size: 14px ;
         margin-top: .30rem;
     }
+    @include responsive(medium) {
+        &-image {
+            width: 80px;
+        }
+        &-title {
+            font-size: 14px;
+        }
+
+        &-description {
+            font-size: 13px;
+        }
+    }
 }

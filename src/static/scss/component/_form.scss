@@ -56,4 +56,9 @@
     @include responsive(670px) {
         padding: 0;
     }
+    @include responsive(medium) {
+        &-group {
+            grid-template-columns: 1fr;
+        }
+    }
 }

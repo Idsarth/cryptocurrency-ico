@@ -31,4 +31,7 @@
     @include responsive(medium) {
         padding-top: 5rem;
     }
+    @include responsive(small) {
+        padding-top: 3rem;
+    }
 }
