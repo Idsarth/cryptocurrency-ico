@@ -16,8 +16,15 @@
 
 .l-slide {
     margin-top: var(--header-height);
-    height: 100vh;
     @include responsive(large) {
         --header-height: 4rem;
     }
+}
+
+.l-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    width: 100%;
+    background-color: var(--color-main);
 }

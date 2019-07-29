@@ -1,0 +1,11 @@
+.global-max-content {
+    max-width: map-get($map: $breakpoints, $key: xxlarge);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.global-title {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    font-weight: 500;
+}
