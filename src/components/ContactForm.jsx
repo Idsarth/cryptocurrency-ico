@@ -6,7 +6,7 @@ class ContactForm extends Component {
     super(props)
 
     this.state = {
-      user: '',
+      firstname: '',
       email: '',
       message: '',
       sendText: 'Enviar mensaje'
@@ -26,11 +26,10 @@ class ContactForm extends Component {
 
     const url = `https://alycoinappweb.appspot.com/alysystem/post/email`
     const requestApi = {
-      name: this.state.name,
+      name: this.state.firstname,
       email: this.state.email,
       message: this.state.message
     }
-    console.log(requestApi)
     this.setState({ sendText: 'Enviando mensaje...' })
     axios.post(url, requestApi)
       .then(response => {
@@ -50,7 +49,7 @@ class ContactForm extends Component {
             className='form-input'
             value={this.state.name}
             onChange={this.handlerChange}
-            name='name'
+            name='firstname'
           />
 
           <input
