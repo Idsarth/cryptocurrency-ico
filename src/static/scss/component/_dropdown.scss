@@ -28,6 +28,11 @@
         width: 80px;
         object-fit: contain;
         object-position: center;
+        transition: .3s ease-in-out;
+        &:hover {
+            transition: .3s ease-in-out;
+            transform: scale(1.2);
+        }
     }
 
     &-title {
@@ -52,6 +57,13 @@
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
+        }
+    }
+    @include responsive(small) {
+        &-image {
+            &:hover {
+                transform: scale(1);
+            }
         }
     }
 }

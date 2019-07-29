@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class ContactForm extends Component {
   constructor (props) {
@@ -23,20 +24,20 @@ class ContactForm extends Component {
   async handlerSubmit (e) {
     e.preventDefault()
 
-    const url = ``
+    const url = `https://alycoinappweb.appspot.com/alysystem/post/email`
     const requestApi = {
       name: this.state.name,
       email: this.state.email,
       message: this.state.message
     }
+    console.log(requestApi)
     this.setState({ sendText: 'Enviando mensaje...' })
-    const result = await fetch(url, { method: 'POST', body: JSON.stringify(requestApi) })
-    const response = await result.json()
-    if (response.sucess === 'send is Successfully') {
-      this.setState({ sendText: 'Mensaje enviado' })
-    } else {
-      this.setState({ sendText: 'Mensaje fallido' })
-    }
+    axios.post(url, requestApi)
+      .then(response => {
+        if (response.success === 'send is Sucessfully') { this.setState({ sendText: 'Mensaje enviado' }) } else {
+          this.setState({ sendText: 'Mensaje no enviado' })
+        }
+      })
   }
 
   render () {
