@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
+import DropDown from './DropDown'
 
 const Nav = ({ handlerActive }) => {
   return (
@@ -7,7 +8,10 @@ const Nav = ({ handlerActive }) => {
       <ul className='navbar-list'>
         <li className='navbar-item'><Link to='/' className='navbar-link'>Inicio</Link></li>
         <li className='navbar-item'><Link to='/about' className='navbar-link'>Nosotros</Link></li>
-        <li className='navbar-item'><Link to='#' className='navbar-link'>Productos</Link></li>
+        <li className='navbar-item'>
+          <Link to='#' className='navbar-link position'>Productos
+            <DropDown />
+          </Link></li>
       </ul>
     </nav>
   )

@@ -20,10 +20,23 @@ class ContactForm extends Component {
     })
   }
 
-  handlerSubmit (e) {
+  async handlerSubmit (e) {
     e.preventDefault()
 
-    console.log(this.state)
+    const url = ``
+    const requestApi = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    }
+    this.setState({ sendText: 'Enviando mensaje...' })
+    const result = await fetch(url, { method: 'POST', body: JSON.stringify(requestApi) })
+    const response = await result.json()
+    if (response.sucess === 'send is Successfully') {
+      this.setState({ sendText: 'Mensaje enviado' })
+    } else {
+      this.setState({ sendText: 'Mensaje fallido' })
+    }
   }
 
   render () {

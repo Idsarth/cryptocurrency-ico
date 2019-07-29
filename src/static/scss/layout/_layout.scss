@@ -26,6 +26,7 @@
     padding-right: 1rem;
     padding-top: 10rem;
     width: 100%;
+    position: relative;
 
     @include responsive(medium) {
         padding-top: 5rem;
