@@ -1,5 +1,7 @@
 .about {
     margin-top: 15rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     .global-title-about {
         font-size: 1.1rem;
         color: var(--color-secondary);
@@ -26,6 +28,36 @@
                 bottom: 10px;
                 font-size: 40px;
             }
+        }
+    }
+
+    &-content {
+        margin-top: 3rem;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 10rem;
+    }
+
+    &-paragraph {
+        color: darken(#fff, 30);
+        font-size: 14px;
+        text-align: center;
+        max-width: map-get($map: $breakpoints, $key: xlarge);
+    }
+
+    @include responsive(medium) {
+        margin-top: 8rem;
+        &-content {
+            margin-top: 1rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    @include responsive(small) {
+        padding-left: .2rem;
+        padding-right: .2rem;
+        &-paragraph {
+            font-size: 13px;
         }
     }
 }

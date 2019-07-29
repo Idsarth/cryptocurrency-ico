@@ -4,10 +4,8 @@ import Navbar from './components/Navbar'
 import PageLoading from './pages/PageLoading'
 import Footer from './components/Footer'
 
-// const Home = React.lazy(() => import('./pages/Home'))
-// const About = React.lazy(() => import('./pages/About'))
-import Home from './pages/Home'
-import About from './pages/About'
+const Home = React.lazy(() => import('./pages/Home'))
+const About = React.lazy(() => import('./pages/About'))
 
 const App = () => {
   return (

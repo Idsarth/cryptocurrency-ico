@@ -8,7 +8,7 @@
     margin-left: auto;
 
     &-logo {
-        width: 250px;
+        height: 65px;
     }
 
     &-content {
@@ -29,6 +29,7 @@
         font-weight: 500;
         text-transform: uppercase;
         height: 100%;
+        width: 80px;
         font-size: 14px;
         display: flex;
         align-items: center;
@@ -72,16 +73,14 @@
             }
         }
         &-logo {
-            width: 200px;
+            height: 60px;
         }
     }
     @include responsive(small) {
         &-content {
             width: 90%;
         }
-        &-logo {
-            width: 150px;
-        }
+        height: 57px;
     }
     @include responsive(xsmall) {
         &-content {
