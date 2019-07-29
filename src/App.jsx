@@ -11,11 +11,11 @@ import About from './pages/About'
 const App = () => {
   return (
     <Suspense fallback={<PageLoading />}>
+      <Navbar />
       <Router>
         <Home path='/' />
         <About path='/about' />
       </Router>
-      <Navbar />
     </Suspense>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import Loader from '../components/Loader'
 
 const PageLoading = () => {
   return (
-    <div>
-        loading...
+    <div className='l-loader'>
+      <Loader />
     </div>
   )
 }
