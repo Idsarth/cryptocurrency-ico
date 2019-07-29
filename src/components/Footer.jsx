@@ -1,15 +1,12 @@
 import React from 'react'
 import CopyRight from './CopyRight'
-import Social from './Social'
 
 const Footer = () => {
   return (
-    <footer className='l-section'>
-      <div className='footer-top' />
-
-      <div className='footer-bottom'>
+    <footer className='l-footer'>
+      <div className='global-max-content footer'>
+        <div className='footer-top' />
         <CopyRight />
-        <Social />
       </div>
     </footer>
   )

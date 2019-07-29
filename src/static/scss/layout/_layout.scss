@@ -26,7 +26,6 @@
     padding-right: 1rem;
     padding-top: 10rem;
     width: 100%;
-    background-color: var(--color-main);
 
     @include responsive(medium) {
         padding-top: 5rem;
@@ -34,4 +33,18 @@
     @include responsive(small) {
         padding-top: 3rem;
     }
+}
+
+.l-footer {
+    background-color: #08031A;
+    margin-top: 4rem;
+    height: 250px;
+}
+
+.l-copyright {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid darken(#fff, 60);
 }
