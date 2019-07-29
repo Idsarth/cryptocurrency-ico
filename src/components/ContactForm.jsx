@@ -33,7 +33,7 @@ class ContactForm extends Component {
     this.setState({ sendText: 'Enviando mensaje...' })
     axios.post(url, requestApi)
       .then(response => {
-        if (response.success === 'send is Sucessfully') { this.setState({ sendText: 'Mensaje enviado' }) } else {
+        if (response.success === 'send is Successfully') { this.setState({ sendText: 'Mensaje enviado' }) } else {
           this.setState({ sendText: 'Mensaje no enviado' })
         }
       })
