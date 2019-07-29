@@ -1,0 +1,15 @@
+.l-navbar {
+    background-color: var(--color-main);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    height: var(--header-height);
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include responsive(large) {
+        --header-height: 4rem;
+    }
+}

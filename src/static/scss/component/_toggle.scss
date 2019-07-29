@@ -1,0 +1,8 @@
+.toggle {
+    display: none;
+    color: var(--color-secondary);
+
+    @include responsive(medium) {
+        display: block;
+    }
+}

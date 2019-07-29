@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import Layout from '../container/Layout'
 
 const About = () => {
   return (
-    <Fragment>
-      <p>About....</p>
-    </Fragment>
+    <Layout title='Nosotros' description=''>
+      <p>About...</p>
+    </Layout>
   )
 }
 

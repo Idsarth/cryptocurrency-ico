@@ -4,6 +4,7 @@ import ContactForm from './ContactForm'
 const Contact = () => {
   return (
     <section className='l-section'>
+
       <ContactForm />
     </section>
   )

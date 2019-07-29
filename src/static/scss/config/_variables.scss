@@ -2,10 +2,9 @@
     --color-main: #0E0524;
     --color-main-dark: #110631;
     --color-secondary: #3F93F7;
-    // --color-body: linear-gradient(70deg, var(--color-main) 0%, var(--color-main-dark) 25%, var(--color-main-dark) 35%, var(--color-main-dark) 65%, var(--color-main-dark) 75%, var(--color-main) 100%);
     --color-body: linear-gradient(var(--color-main), var(--color-main-dark));
 
-    --body-font: 'Open Sans', sans-serif;
+    --body-font: 'Poppins', sans-serif;
     --alycoin-font: 'Matura MT Script Capitals', sans-serif;
     --padding-left: 8rem;
     --padding-right: 8rem;

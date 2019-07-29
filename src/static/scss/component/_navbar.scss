@@ -1,0 +1,93 @@
+.navbar {
+    height: 100%;
+    max-width: map-get($map: $breakpoints, $key: xxlarge);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    &-logo {
+        width: 250px;
+    }
+
+    &-content {
+        height: 100%;
+    }
+
+    &-list {
+        height: 100%;
+        display: flex;
+    }
+    &-item {
+        padding: 0 15px;
+        height: 100%;
+        cursor: pointer;
+    }
+    &-link {
+        color: darken(#ffffff, 20);
+        font-weight: 500;
+        text-transform: uppercase;
+        height: 100%;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid transparent;
+        transition: all .3s ease-in-out;
+        &:hover {
+            border-bottom: 2px solid var(--color-secondary);
+            color: var(--color-secondary);
+            transition: all .3s ease-in-out;
+        }
+    }
+    @include responsive(medium) {
+        &-content {
+            position: fixed;
+            top: var(--header-height);
+            left: -100%;
+            width: 70%;
+            height: 100vh;
+            padding: 20px 0;
+            background-color: var(--color-main);
+            transition: .4s linear;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        &-item {
+            padding: 10px;
+            width: 100%;
+            &:hover {
+                background-color: var(--color-secondary);
+            }
+        }
+        &-link {
+            border: none;
+            &:hover {
+                border: none;
+                color: var(--color-main);
+            }
+        }
+        &-logo {
+            width: 200px;
+        }
+    }
+    @include responsive(small) {
+        &-content {
+            width: 90%;
+        }
+    }
+    @include responsive(xsmall) {
+        &-content {
+            width: 95%;
+        }
+    }
+}
+
+.navbar-open {
+    left: 0;
+    transition: .4s linear;
+}
