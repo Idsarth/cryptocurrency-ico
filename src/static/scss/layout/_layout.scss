@@ -57,9 +57,7 @@
     align-items: center;
     border-top: 1px solid darken(#fff, 60);
 
-
-
-    @include responsive(330px) {
+    @include responsive(500px) {
         flex-direction: column-reverse;
         padding: .3rem;
         justify-content: center;

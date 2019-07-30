@@ -2,7 +2,7 @@
     height: 100%; 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80% 1fr;
+    grid-template-rows: 70% 1fr;
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -58,7 +58,7 @@
 
     @include responsive(600px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 90% 10%;
+        grid-template-rows: 80% 20%;
 
         &-top {
             grid-template-columns: 1fr;
@@ -73,7 +73,10 @@
            font-size: 20px;
         }
     }
-    @include responsive(small) {
+    @include responsive(510px) {
         grid-template-rows: 80% 20%;
+    }
+    @include responsive(small) {
+        
     }
 }
