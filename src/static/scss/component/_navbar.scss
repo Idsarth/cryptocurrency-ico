@@ -65,13 +65,13 @@
             padding: 10px;
             width: 100%;
             &:hover {
-                background-color: var(--color-secondary);
+                background-color: none;
             }
         }
         &-link {
             border: none;
             &:hover {
-                border: none;
+                border-bottom: none;
                 color: var(--color-main);
             }
         }
