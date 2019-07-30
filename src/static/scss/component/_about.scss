@@ -36,6 +36,10 @@
         justify-content: center;
         display: flex;
         margin-bottom: 10rem;
+        background-color: var(--color-main-dark);
+        padding: 5rem 3rem;
+        border-radius: 20px;
+        box-shadow: 1px 2px 8px 2px var(--color-secondary);
     }
 
     &-paragraph {
