@@ -9,7 +9,8 @@ class ContactForm extends Component {
       firstname: '',
       email: '',
       message: '',
-      sendText: 'Enviar mensaje'
+      sendText: 'Enviar mensaje',
+      error: false
     }
     this.handlerChange = this.handlerChange.bind(this)
     this.handlerSubmit = this.handlerSubmit.bind(this)
@@ -30,13 +31,22 @@ class ContactForm extends Component {
       email: this.state.email,
       message: this.state.message
     }
-    this.setState({ sendText: 'Enviando mensaje...' })
-    axios.post(url, requestApi)
-      .then(response => {
-        if (response.data.success === 'send is Successfully') { this.setState({ sendText: 'Mensaje enviado' }) } else {
-          this.setState({ sendText: 'Mensaje no enviado' })
-        }
-      })
+
+    if (this.state.firstname === '' && this.state.firstname.trim === '') {
+      return null
+    } else if (this.state.email === '' && this.state.firstname.trim === '') {
+      return null
+    } else if (this.state.message === '' && this.state.message === '') {
+      return null
+    } else {
+      this.setState({ sendText: 'Enviando mensaje...' })
+      axios.post(url, requestApi)
+        .then(response => {
+          if (response.data.success === 'send is Successfully') { this.setState({ sendText: 'Mensaje enviado' }) } else {
+            this.setState({ sendText: 'Mensaje no enviado', error: true })
+          }
+        })
+    }
   }
 
   render () {
@@ -75,7 +85,7 @@ class ContactForm extends Component {
         <input
           type='submit'
           value={this.state.sendText}
-          className='form-submit'
+          className={`form-submit ${this.state.error ? 'error' : ''}`}
         />
       </form>
     )
