@@ -43,6 +43,10 @@
     height: 100%;
     top: 0;
     left: 0;
+
+    @include responsive(500px) {
+        display: none;
+    }
 }
 
 .position {

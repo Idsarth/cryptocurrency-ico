@@ -49,6 +49,14 @@
         max-width: map-get($map: $breakpoints, $key: xlarge);
     }
 
+    @include responsive(750px) {
+        &-content {
+            background-color: none;
+            padding: 0;
+            box-shadow: none;
+        }
+    }
+
     @include responsive(medium) {
         margin-top: 8rem;
         &-content {
