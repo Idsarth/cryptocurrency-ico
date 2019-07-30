@@ -52,6 +52,9 @@
             padding: 20px 0;
             background-color: var(--color-main);
             transition: .4s linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         &-list {
             display: flex;
@@ -76,10 +79,14 @@
             height: 60px;
         }
     }
-    @include responsive(small) {
+
+    @include responsive(500px) {
         &-content {
             width: 90%;
         }
+    }
+    @include responsive(small) {
+       
         height: 57px;
     }
     @include responsive(xsmall) {
