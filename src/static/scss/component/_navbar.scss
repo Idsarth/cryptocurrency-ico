@@ -70,10 +70,11 @@
             }
         }
         &-link {
+            width: auto;
             border: none;
             &:hover {
                 border-bottom: none;
-                color: var(--color-main);
+                color: var(--color-secondary);
             }
         }
         &-logo {
