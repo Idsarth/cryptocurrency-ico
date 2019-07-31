@@ -53,8 +53,9 @@
             background-color: var(--color-main);
             transition: .4s linear;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            overflow-y: auto;
         }
         &-list {
             display: flex;

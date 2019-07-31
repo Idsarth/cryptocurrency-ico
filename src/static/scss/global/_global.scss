@@ -57,6 +57,12 @@
         transform: scaleY(1);
         transition: .3s ease-in-out;
     }
+    @include responsive(medium) {
+        display: inline-block;
+        &:hover {
+            transform: scaleY(1);
+        }
+    }
 }
 
 .error {

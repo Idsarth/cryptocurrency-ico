@@ -59,12 +59,29 @@
             justify-content: space-evenly;
             align-items: center;
         }
-    }
-    @include responsive(small) {
+        &-title {
+            color: var(--color-secondary);
+        }
         &-image {
+            height: 80px;
+            width: 70px;
             &:hover {
                 transform: scale(1);
             }
+        }
+    }
+    @include responsive(500px) {
+        &-content {
+            height: 70px;
+            width: 70px;
+        }
+        &-image {
+            height: 60px;
+            width: 50px;
+        }
+        &-title {
+            margin-top: 0;
+            font-size: 12px;
         }
     }
 }

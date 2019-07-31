@@ -72,6 +72,9 @@
         &-icon {
            font-size: 20px;
         }
+        &-link {
+            color: var(--color-secondary);
+        }
     }
     @include responsive(510px) {
         grid-template-rows: 80% 20%;
