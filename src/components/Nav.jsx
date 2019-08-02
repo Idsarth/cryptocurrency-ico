@@ -8,10 +8,10 @@ const Nav = ({ handlerActive }) => {
       <ul className='navbar-list'>
         <li onClick={handlerActive} className='navbar-item'><Link to='/' className='navbar-link'>Inicio</Link></li>
         <li onClick={handlerActive} className='navbar-item'><Link to='/about' className='navbar-link'>Nosotros</Link></li>
-        <li onClick={handlerActive} className='navbar-item'>
-          <Link to='#' className='navbar-link position'>Productos
+        <li className='navbar-item'>
+          <a href='#' className='navbar-link position'>Productos
             <DropDown />
-          </Link></li>
+          </a></li>
       </ul>
     </nav>
   )
